@@ -1,0 +1,18 @@
+#include<iostream>
+#include<unordered_map>
+using namespace std;
+int main(){
+    unordered_map<int,string>student;
+    student[1] = "jacqueline";
+    student[2] ="Blake";
+    student.insert(make_pair(3,"Denis"));
+    student.insert(make_pair(4,"Blake"));
+    student[5]= "Timothy";
+    student[5]= "Aaron";
+    for(auto iter = student.begin();iter !=student.end();++iter){
+        cout <<iter->first<<"-"<<iter->second<<endl;
+        cout <<(*iter).first<<"-"<< (*iter).second<<endl;
+    }
+    student.clear();
+    return 0;
+    }
